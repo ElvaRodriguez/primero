@@ -1,0 +1,100 @@
+<ion-header>
+  
+  <ion-toolbar>
+    
+    <ion-buttons slot="start">
+    
+      <ion-back-button defaultHref="home"></ion-back-button>
+  
+    </ion-buttons>
+
+
+  <ion-title>
+
+    <ion-row style="text-align: center;">
+     
+      <ion-col style="text-align: center;">
+
+        <img src="./assets/icon/logo1.jpeg" style="width: 100px; height: 45px;" >
+      
+      </ion-col>
+   
+    </ion-row>
+ 
+  </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <ion-list>
+              <ion-list-header>
+                <ion-label> </ion-label>
+              </ion-list-header>
+
+              <ion-item>
+                <ion-avatar slot="start">
+                  <img src="./assets/icon/imagen1.jpg">
+                </ion-avatar>
+                <ion-label position="floating">Medicamento</ion-label>
+                <ion-input type="text" [(ngModel)]="mMedicamento" ></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-avatar slot="start">
+                  <img src="./assets/icon/image.png">
+                </ion-avatar>
+                <ion-label position="floating">Horario</ion-label>
+                <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm:ss" [(ngModel)]="mHorario"></ion-datetime>
+              </ion-item>
+
+              <ion-item>
+                <ion-avatar slot="start">
+                  <img src="./assets/icon/image.png">
+                </ion-avatar>
+                <ion-label position="floating">Repetir cada</ion-label>
+                <ion-input type="number" [(ngModel)]="mrep"></ion-input>
+              </ion-item>              
+              
+              <ion-item>
+                <ion-avatar slot="start">
+                  <img src="./assets/icon/images4.png">
+                </ion-avatar>
+                <ion-label position="floating">Dosis</ion-label>
+                <ion-input type="number" [(ngModel)]="mDosis"></ion-input>
+              </ion-item>
+              
+              <ion-item>
+                <ion-avatar slot="start">
+                  <img src="./assets/icon/calen.jpg">
+                </ion-avatar>
+                <ion-label position="floating">Fecha inicio</ion-label>
+                <ion-datetime displayFormat="DD-MM-YYYY"  [(ngModel)]="mFechaInicio"></ion-datetime>
+              </ion-item>
+
+              <ion-item>
+                <ion-avatar slot="start">
+                  <img src="./assets/icon/calen.jpg">
+                </ion-avatar>
+                <ion-label position="floating">Fecha Fin</ion-label>
+                <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="mFechaFin"></ion-datetime>
+              </ion-item>
+
+          </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="onGuardar()"> 
+                Guardar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

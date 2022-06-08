@@ -1,0 +1,76 @@
+<ion-header>
+  <div>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>   
+    <ion-title>
+      <ion-row style="text-align: center;"> 
+        <ion-col style="text-align: center;">
+           <img src="./assets/icon/logo1.jpeg" style="width: 100px; height: 40px;">
+        </ion-col>
+      </ion-row>
+    </ion-title>
+  </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content>
+  <!-- FUNCION AGREGAR -->
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+ <ion-fab-button style="width: 25px; height: 25px; margin-top: -40px;" (click)="onNuevo()"> 
+   <ion-icon name="add"></ion-icon>
+ </ion-fab-button>
+ </ion-fab>
+
+ <ion-list >  
+   <ion-searchbar animated (ionChange)= "buscar( $event )" placeholder="Buscar por especialidad"></ion-searchbar>
+
+   <div>
+   
+    <!--  | filtro-Consulta: textoBuscar -->
+     <ion-item *ngFor="let item of consultas | filtrado: textoBuscar ">
+      
+       <ion-label>
+         <ion-label class="ion-text-wrap label"><strong>Especialidad:</strong></ion-label>
+         <ion-label class="ion-text-wrap label">
+                       {{ item.especialidad}}
+           </ion-label>
+         <ion-label class="ion-text-wrap label"><strong>Nombre del doctor:</strong> {{ item.nombre_doctor}}</ion-label>
+         <ion-label class="ion-text-wrap label"><strong>Fecha de Consulta:</strong> {{ item.fecha_consulta}}</ion-label>
+         <ion-label class="ion-text-wrap label"><strong>Horario:</strong> {{ item.horario}}</ion-label>
+
+       </ion-label>
+
+       <ion-button 
+             slot="end" 
+             color="primary"
+             fill="outline"
+             (click)="editar(item)" 
+             shape="round"> <ion-icon name="create-outline"></ion-icon>
+       </ion-button>
+ 
+       <!-- cancelar alarma -->
+       <ion-button 
+           slot="end" 
+           color="primary"
+           fill="outline"
+           (click)="cancelar()" 
+           shape="round" > <ion-icon name="notifications-off-outline"></ion-icon>
+       </ion-button> 
+
+       <ion-button 
+           slot="end" 
+           color="primary"
+           fill="outline"
+           (click)="eliminar(item)" 
+           shape="round" ><ion-icon name="trash-bin-outline"></ion-icon>
+       </ion-button>
+
+     </ion-item>
+   </div>
+</ion-list>
+
+
+
+</ion-content>

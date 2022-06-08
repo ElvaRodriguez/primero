@@ -1,0 +1,84 @@
+<ion-header>
+  
+  <ion-toolbar>
+    
+    <ion-buttons slot="start">
+    
+      <ion-back-button defaultHref="home"></ion-back-button>
+  
+    </ion-buttons>
+
+
+  <ion-title>
+
+    <ion-row style="text-align: center;">
+     
+      <ion-col style="text-align: center;">
+
+        <img src="./assets/icon/logo1.jpeg" style="width: 100px; height: 45px;" >
+      
+      </ion-col>
+   
+    </ion-row>
+ 
+  </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <ion-list>
+              <ion-list-header>
+                <ion-label> </ion-label>
+              </ion-list-header>
+
+              <ion-item>
+                <ion-avatar slot="start">
+                  <img src="./assets/icon/imagen1.jpg">
+                </ion-avatar>
+                <ion-label position="floating">Nombre del doctor</ion-label>
+                <ion-input type="text" [(ngModel)]="mdoctor"></ion-input>
+              </ion-item>
+              
+              <ion-item>
+                <ion-avatar slot="start">
+                  <img src="./assets/icon/images4.png">
+                </ion-avatar>
+                <ion-label position="floating">Especialidad</ion-label>
+                <ion-input type="text" [(ngModel)]="mespecialidad"></ion-input>
+              </ion-item>
+              
+              <ion-item>
+                <ion-avatar slot="start">
+                  <img src="./assets/icon/calen.jpg">
+                </ion-avatar>
+                <ion-label position="floating">Fecha de Consulta</ion-label>
+                <ion-datetime displayFormat="DD-MM-YYYY"  [(ngModel)]="mfechaConsulta"></ion-datetime>
+              </ion-item>
+
+              <ion-item>
+                <ion-avatar slot="start">
+                  <img src="./assets/icon/image.png">
+                </ion-avatar>
+                <ion-label position="floating">Horario</ion-label>
+                <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm" [(ngModel)]="mhorario"></ion-datetime>
+              </ion-item>
+
+          </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="onGuardar()"> 
+                Guardar Consulta
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

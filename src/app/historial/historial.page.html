@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>   
+
+    <ion-title> 
+      <ion-row style="text-align: center;"> 
+        <ion-col style="text-align: center;">
+           <img src="./assets/icon/logo1.jpeg" style="width: 100px; height: 40px;">
+        </ion-col>
+      </ion-row>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list-header>
+    <strong> Historial de medicamentos y Consultas </strong>
+  </ion-list-header>
+
+  <ion-list > 
+<script>
+
+</script>
+
+     <div>
+       
+      <ion-item *ngFor="let item of arrayMedicamentos ">
+  <!-- *ngIf=" b > a" -->     
+
+        <ion-avatar slot="start">
+          <img src="./assets/icon/medicina.png">
+        </ion-avatar>
+        <ion-label >
+          <ion-label class="ion-text-wrap label"><strong>Medicamento:</strong> {{ item.nombre_medicamento }} </ion-label>
+          <ion-label class="ion-text-wrap label" ><strong>Finalización de medicamento:</strong> {{ item.fecha_fin}}</ion-label>
+        </ion-label>
+      </ion-item>
+
+    </div>
+
+      <div>
+      <ion-item  *ngFor="let  c of consultas ">
+        <ion-avatar slot="start">
+          <img src="./assets/icon/medicina.png">
+        </ion-avatar>
+        <ion-label>
+          <ion-label class="ion-text-wrap label"><strong>especialidad:</strong> {{ c.especialidad }} </ion-label>
+          <ion-label class="ion-text-wrap label"><strong>Fecha consulta:</strong> {{ c.fecha_consulta}}</ion-label>
+        </ion-label>
+      </ion-item>
+    </div>
+
+
+</ion-list>
+</ion-content>

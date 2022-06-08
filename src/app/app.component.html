@@ -1,0 +1,51 @@
+<ion-app>
+
+  <ion-menu side="start" menuId="custom" 
+  class="my-custom-menu" contentId="main">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+
+    <ion-content>
+      <ion-list>
+          <br>
+        <ion-item (click)="irUsuario(item)"> 
+          <ion-icon name="person-circle-outline"></ion-icon> Usuario</ion-item>
+            <br>
+
+            <br>
+        <ion-item (click)="irMedicamento()"> 
+          <ion-icon name="fitness-outline"></ion-icon> Medicamento </ion-item>
+            <br>
+
+            <br>
+        <ion-item (click)="irConsulta()"> 
+          <ion-icon name="medkit-outline"></ion-icon> Consulta </ion-item>
+            <br>
+
+            <br>
+        <ion-item (click)="irHistorial()">
+          <ion-icon name="mail-open-outline"></ion-icon> Historial </ion-item>
+            <br>
+
+            <br>
+        <ion-item (click)="irGeo()"> 
+          <ion-icon name="location-outline"></ion-icon> Geo Farmacia </ion-item>
+            <br>
+
+            <br>
+        <ion-item (click)="cerrarSesion()">
+          <ion-icon name="arrow-undo-circle-outline"></ion-icon> Cerrar Sesion </ion-item>  
+           <br> 
+           
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>
