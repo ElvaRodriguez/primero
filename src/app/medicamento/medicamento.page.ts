@@ -10,11 +10,11 @@ import { ToastController } from '@ionic/angular';
 export class MedicamentoPage implements OnInit {
   mid;
   mMedicamento;
-  mHorario: String = new Date().toLocaleString();
+  mHorario: String = new Date().toTimeString();
   mDosis;
   mRep;
-  mFechaInicio: String = new Date().toLocaleString();
-  mFechaFin: String = new Date().toLocaleString();
+  mFechaInicio: String = new Date().toDateString();
+  mFechaFin: String = new Date().toDateString();
   codigoPersona;
   correoUsuario;
   mrep;
